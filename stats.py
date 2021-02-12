@@ -30,8 +30,9 @@ def change_date():
 def get_data():
     
     data = " "
+    num_pieces = 0
     
-    for i in range(1, 5): 
+    for i in range(1, num_pieces): 
         if (driver.find_element_by_xpath(f'//*[@id="royalties-table"]/tbody/tr[{i}]/td[2]').is_displayed()):
             title = driver.find_element_by_xpath(f'//*[@id="royalties-table"]/tbody/tr[{i}]/td[2]')
             data += title.text.upper() + " has "
